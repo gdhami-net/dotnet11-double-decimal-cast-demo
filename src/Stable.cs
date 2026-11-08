@@ -7,7 +7,10 @@ static class Stable
     // Formats the double with 15 significant digits and parses the text. The README says where this
     // matches the old cast and where it can land one digit away.
     public static decimal FromG15(double d) =>
-        decimal.Parse(d.ToString("G15", CultureInfo.InvariantCulture), NumberStyles.Float, CultureInfo.InvariantCulture);
+        decimal.Parse(
+            d.ToString("G15", CultureInfo.InvariantCulture),
+            NumberStyles.Float,
+            CultureInfo.InvariantCulture);
 
     public static void Run()
     {
