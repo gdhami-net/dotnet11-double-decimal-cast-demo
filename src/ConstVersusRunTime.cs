@@ -10,6 +10,7 @@ static class ConstVersusRunTime
     public static void Run()
     {
         Output.Section("const against run time", labelWidth: 18);
+        Output.ShowEnvironment();
 
         decimal literal = (decimal)1.23;
 

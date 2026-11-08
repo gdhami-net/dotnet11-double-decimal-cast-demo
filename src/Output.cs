@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace CastDemo;
 
@@ -12,6 +13,12 @@ static class Output
         _labelWidth = labelWidth;
         Console.WriteLine();
         Console.WriteLine($"== {name}");
+    }
+
+    public static void ShowEnvironment()
+    {
+        Show("runtime", RuntimeInformation.FrameworkDescription);
+        Show("built for", AppContext.TargetFrameworkName ?? "unknown");
     }
 
     public static void Show(string label, object? value)
