@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- check.ps1 passes -p:Tfm=..., so the same source builds for both targets. -->
+    <Tfm Condition="'$(Tfm)' == ''">net10.0</Tfm>
+    <TargetFramework>$(Tfm)</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseAppHost>false</UseAppHost>
+    <RootNamespace>CastDemo</RootNamespace>
+    <AssemblyName>CastDemo</AssemblyName>
+  </PropertyGroup>
+
+</Project>
